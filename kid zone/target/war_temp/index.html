@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Smart Kids Learning World - Fun Learning App for Kids</title>
+  <meta name="description" content="A colorful, interactive educational app for kids aged 2–7 years old. Learn alphabets, objects, good habits, manners, rhymes, and games!">
+  
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Floating Background Canvas for Bubbles -->
+  <canvas id="bubbleCanvas"></canvas>
+
+  <!-- Desktop Viewport Toggle Bar -->
+  <div class="viewport-bar">
+    <span>📱 Device Frame:</span>
+    <button class="viewport-btn active" id="toggleMobileView">Mobile Simulator</button>
+  </div>
+
+  <!-- Main Mobile App Shell Container -->
+  <div class="app-container" id="mobileFrame">
+    
+    <!-- Top Header & Kid Stats Bar -->
+    <header class="app-header">
+      <div class="app-logo">
+        <span class="logo-icon">🌟</span>
+        <span>Kids World</span>
+      </div>
+      <div class="header-stats">
+        <div class="stat-badge coins">
+          <span>🪙</span>
+          <span id="coinsDisplay">50</span>
+        </div>
+        <div class="stat-badge stars">
+          <span>⭐</span>
+          <span id="starsDisplay">12</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dynamic Content Render Target -->
+    <main class="app-content" id="appContent">
+      <!-- Screen Views Rendered Dynamically via js/app.js -->
+    </main>
+
+    <!-- Interactive Mascot Guide Widget -->
+    <div class="mascot-container" id="mascotWidget">
+      <div class="mascot-bubble" id="mascotText">
+        Hi! I'm Sparky! Tap me anytime for fun tips! 🐉
+      </div>
+      <div class="mascot-avatar" id="mascotAvatar">
+        🐉
+      </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-screen="home">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </button>
+      <button class="nav-item" data-screen="level1">
+        <span class="nav-icon">📖</span>
+        <span>Learn</span>
+      </button>
+      <button class="nav-item" data-screen="level2">
+        <span class="nav-icon">🎮</span>
+        <span>Games</span>
+      </button>
+      <button class="nav-item" data-screen="level3">
+        <span class="nav-icon">🏆</span>
+        <span>Quiz</span>
+      </button>
+      <button class="nav-item" data-screen="level4">
+        <span class="nav-icon">🎨</span>
+        <span>Draw</span>
+      </button>
+      <button class="nav-item" data-screen="shop">
+        <span class="nav-icon">🛍️</span>
+        <span>Shop</span>
+      </button>
+      <button class="nav-item" data-screen="parent">
+        <span class="nav-icon">📊</span>
+        <span>Parents</span>
+      </button>
+    </nav>
+
+  </div>
+
+  <!-- Application JavaScript Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

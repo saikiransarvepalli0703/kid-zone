@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <display-name>Smart Kids Learning World &amp; Calculator Application</display-name>
+
+    <!-- App Servlet -->
+    <servlet>
+        <servlet-name>AppServlet</servlet-name>
+        <servlet-class>com.kidzone.app.AppServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AppServlet</servlet-name>
+        <url-pattern>/api/app/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- Calculator Servlet -->
+    <servlet>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <servlet-class>com.kidzone.app.CalculatorServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculatorServlet</servlet-name>
+        <url-pattern>/api/calculator/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+</web-app>
